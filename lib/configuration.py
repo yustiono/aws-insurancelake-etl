@@ -81,18 +81,18 @@ def get_local_configuration(environment: str, local_mapping: dict = None) -> dic
         local_mapping = {
             DEPLOYMENT: {
                 ACCOUNT_ID: active_account_id,
-                REGION: 'us-east-2',
+                REGION: 'ca-central-1',
 
                 # If you use GitHub / GitHub Enterprise, this will be the organization name
-                GITHUB_REPOSITORY_OWNER_NAME: '',
+                GITHUB_REPOSITORY_OWNER_NAME: 'yustiono',
 
                 # Use your forked Github repo here!
                 # Leave empty if you do not use Github
-                GITHUB_REPOSITORY_NAME: '',
+                GITHUB_REPOSITORY_NAME: 'aws-insurancelake-etl',
 
                 # If you use Bitbucket Cloud or any other supported Codestar provider, specify the
                 # Codestar connection ARN
-                CODESTAR_CONNECTION_ARN: '',
+                CODESTAR_CONNECTION_ARN: 'arn:aws:codestar-connections:ca-central-1:471112642074:connection/d12a5b29-86ca-4172-a200-90be28e9b688',
 
                 # Codestar repository owner or workspace name if using Bitbucket Cloud
                 CODESTAR_REPOSITORY_OWNER_NAME: '',
@@ -107,7 +107,7 @@ def get_local_configuration(environment: str, local_mapping: dict = None) -> dic
                 # Use only if you do NOT use Github or CodeCommit and need to mirror your repository
                 # Name your CodeCommit mirror repo here (recommend matching your external repo)
                 # Leave empty if you use Github or your repository is in CodeCommit already
-                CODECOMMIT_MIRROR_REPOSITORY_NAME: 'aws-insurancelake-etl',
+                CODECOMMIT_MIRROR_REPOSITORY_NAME: '',
 
                 # This is used in the Logical Id of CloudFormation resources.
                 # We recommend Capital case for consistency, e.g. DataLakeCdkBlog
@@ -120,24 +120,24 @@ def get_local_configuration(environment: str, local_mapping: dict = None) -> dic
             },
             DEV: {
                 ACCOUNT_ID: active_account_id,
-                REGION: 'us-east-2',
+                REGION: 'ca-central-1',
                 LINEAGE: True,
                 # VPC_CIDR: '10.20.0.0/24',
-                CODE_BRANCH: 'develop',
-            },
-            TEST: {
-                ACCOUNT_ID: active_account_id,
-                REGION: 'us-east-2',
-                LINEAGE: True,
+                CODE_BRANCH: 'dev',
+#            },
+#            TEST: {
+#                ACCOUNT_ID: active_account_id,
+#                REGION: 'us-east-2',
+#               LINEAGE: True,
                 # VPC_CIDR: '10.10.0.0/24',
-                CODE_BRANCH: 'test',
-            },
-            PROD: {
-                ACCOUNT_ID: active_account_id,
-                REGION: 'us-east-2',
-                LINEAGE: True,
-                # VPC_CIDR: '10.0.0.0/24',
-                CODE_BRANCH: 'main',
+#                CODE_BRANCH: 'test',
+#            },
+#            PROD: {
+#                ACCOUNT_ID: active_account_id,
+#                REGION: 'us-east-2',
+#                LINEAGE: True,
+#                # VPC_CIDR: '10.0.0.0/24',
+#                CODE_BRANCH: 'main',
             }
         }
 
@@ -220,12 +220,12 @@ def get_all_configurations() -> dict:
     return {
         DEPLOYMENT: {
             ENVIRONMENT: DEPLOYMENT,
-            GITHUB_TOKEN: '/InsuranceLake/GitHubToken',
+            GITHUB_TOKEN: '/DataLake/GitHubToken',
             **get_local_configuration(DEPLOYMENT),
         },
         DEV: get_environment_configuration(DEV),
-        TEST: get_environment_configuration(TEST),
-        PROD: get_environment_configuration(PROD),
+#        TEST: get_environment_configuration(TEST),
+#        PROD: get_environment_configuration(PROD),
     }
 
 
