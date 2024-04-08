@@ -81,7 +81,7 @@ def get_local_configuration(environment: str, local_mapping: dict = None) -> dic
         local_mapping = {
             DEPLOYMENT: {
                 ACCOUNT_ID: active_account_id,
-                REGION: 'ca-central-1',
+                REGION: 'us-east-1',
 
                 # If you use GitHub / GitHub Enterprise, this will be the organization name
                 GITHUB_REPOSITORY_OWNER_NAME: 'yustiono',
@@ -120,7 +120,7 @@ def get_local_configuration(environment: str, local_mapping: dict = None) -> dic
             },
             DEV: {
                 ACCOUNT_ID: active_account_id,
-                REGION: 'ca-central-1',
+                REGION: 'us-east-1',
                 LINEAGE: True,
                 # VPC_CIDR: '10.20.0.0/24',
                 CODE_BRANCH: 'dev',
