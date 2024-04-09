@@ -81,7 +81,7 @@ def get_local_configuration(environment: str, local_mapping: dict = None) -> dic
         local_mapping = {
             DEPLOYMENT: {
                 ACCOUNT_ID: active_account_id,
-                REGION: 'us-east-1',
+                REGION: 'ca-central-1',
 
                 # If you use GitHub / GitHub Enterprise, this will be the organization name
                 GITHUB_REPOSITORY_OWNER_NAME: 'yustiono',
@@ -92,7 +92,7 @@ def get_local_configuration(environment: str, local_mapping: dict = None) -> dic
 
                 # If you use Bitbucket Cloud or any other supported Codestar provider, specify the
                 # Codestar connection ARN
-                CODESTAR_CONNECTION_ARN: 'arn:aws:codestar-connections:us-east-1:471112642074:connection/3c87aebe-96b6-427b-94d6-dad3b6c2ad4f',
+                CODESTAR_CONNECTION_ARN: 'arn:aws:codestar-connections:ca-central-1:381492023583:connection/bca7e6f6-66c3-4c7f-afec-eb8c7ccc3d25'
                     #'arn:aws:codestar-connections:ca-central-1:471112642074:connection/d12a5b29-86ca-4172-a200-90be28e9b688',
 
                 # Codestar repository owner or workspace name if using Bitbucket Cloud
@@ -121,7 +121,7 @@ def get_local_configuration(environment: str, local_mapping: dict = None) -> dic
             },
             DEV: {
                 ACCOUNT_ID: active_account_id,
-                REGION: 'us-east-1',
+                REGION: 'ca-central-1',
                 LINEAGE: True,
                 # VPC_CIDR: '10.20.0.0/24',
                 CODE_BRANCH: 'dev',
