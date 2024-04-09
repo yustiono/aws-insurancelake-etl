@@ -92,7 +92,7 @@ def get_local_configuration(environment: str, local_mapping: dict = None) -> dic
 
                 # If you use Bitbucket Cloud or any other supported Codestar provider, specify the
                 # Codestar connection ARN
-                CODESTAR_CONNECTION_ARN: 'arn:aws:codestar-connections:ca-central-1:381492023583:connection/bca7e6f6-66c3-4c7f-afec-eb8c7ccc3d25'
+                CODESTAR_CONNECTION_ARN: 'arn:aws:codestar-connections:ca-central-1:381492023583:connection/bca7e6f6-66c3-4c7f-afec-eb8c7ccc3d25',
                     #'arn:aws:codestar-connections:ca-central-1:471112642074:connection/d12a5b29-86ca-4172-a200-90be28e9b688',
 
                 # Codestar repository owner or workspace name if using Bitbucket Cloud
