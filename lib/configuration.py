@@ -123,7 +123,7 @@ def get_local_configuration(environment: str, local_mapping: dict = None) -> dic
                 ACCOUNT_ID: active_account_id,
                 REGION: 'ca-central-1',
                 LINEAGE: True,
-                # VPC_CIDR: '10.20.0.0/24',
+                VPC_CIDR: '11.20.0.0/24',
                 CODE_BRANCH: 'dev',
 #            },
 #            TEST: {
